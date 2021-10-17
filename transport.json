@@ -2,6 +2,7 @@
     {
         "Type" : "Private Vehicle",
         "Total Percentage": "38.68%",
+        "Total Number": "6773",
         "weekday": {
             "purpose": {
                 "Work related": "57",
@@ -29,6 +30,7 @@
     {
         "Type" : "Train",
         "Total Percentage": "28.38%",
+        "Total Number": "4969",
         "weekday": {
             "purpose": {
                 "Work related": "72.73",
@@ -55,6 +57,7 @@
     {
         "Type" : "Walking",
         "Total Percentage": "18.54%",
+        "Total Number": "3246",
         "weekday": {
             "purpose": {
                 "Work related": "42.59",
@@ -82,6 +85,7 @@
     {
         "Type" : "Tram",
         "Total Percentage": "7.6%",
+        "Total Number": "1331",
         "weekday": {
             "purpose": {
                 "Work related": "56.34",
@@ -108,6 +112,7 @@
     {
         "Type" : "Bicycle",
         "Total Percentage": "3.3%",
+        "Total Number": "577",
         "weekday": {
             "purpose": {
                 "Work related": "64.07",
@@ -135,6 +140,7 @@
     {
         "Type" : "Bus",
         "Total Percentage": "1.63%",
+        "Total Number": "286",
         "weekday": {
             "purpose": {
                 "Work related": "62.55",
@@ -162,6 +168,7 @@
     {
         "Type" : "Taxi",
         "Total Percentage": "0.89%",
+        "Total Number": "156",
         "weekday": {
             "purpose": {
                 "Work related": "54.1",
@@ -189,6 +196,7 @@
     {
         "Type" : "Other",
         "Total Percentage": "0.51%",
+        "Total Number": "89",
         "weekday": {
             "purpose": {
                 "Work related": "40.58",
@@ -216,6 +224,7 @@
     {
         "Type" : "Motorcycle",
         "Total Percentage": "0.47%",
+        "Total Number": "82",
         "weekday": {
             "purpose": {
                 "Work related": "91.89",
