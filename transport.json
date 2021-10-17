@@ -1,0 +1,30 @@
+[
+    {
+        "Type" : "Private Vehicle",
+        "Total Percentage": "38.68%",
+        "weekday": {
+            "purpose": {
+                "work related": "59.37",
+                "Recreational & social": "18.72",
+                "Accompany, Pick-up & Drop-off": "8.37",
+                "Shopping": "7.2",
+                "Education": "0",
+                "Other": "0"
+            },
+            "hour":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+
+        },
+        "weekend": {
+            "purpose": {
+                "work related": "59.37",
+                "Recreational & social": "18.72",
+                "Accompany, Pick-up & Drop-off": "8.37",
+                "Shopping": "7.2",
+                "Education": "0",
+                "Other": "0"
+            },
+            "hour":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+
+        }
+    }
+]
