@@ -8,16 +8,22 @@
   <link href="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js"></script>
 	<script src="https://cdn.bootcss.com/echarts/4.2.1-rc1/echarts.min.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/plugins/timeline.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/plugins/bullets.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
   <script src="data.js"></script>
 </head>
 <body>
-  
+    <div id="chartdiv"></div>
  
   <div class="content">
       <div> 
         <canvas id="chart1" width="500" height="300"></canvas>
       </div>
   </div>
+  
  
  
   
@@ -27,6 +33,7 @@
   
 
 </script>
+<script src = "clock.js"></script>
 <!-- <script src = "top_five.js"></script>
 <script src = "map.js"></script>
 <script src="interactive_chart.js"></script> -->
