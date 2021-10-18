@@ -1,3 +1,4 @@
+//https://echarts.apache.org/examples/zh/editor.html?c=pie-roseType-simple
 var chartDom = document.getElementById('radius');
 var radiusChart = echarts.init(chartDom);
 var radiusOption;
