@@ -3,6 +3,7 @@ var myChart = echarts.init(chartDom);
 var option;
 let transport_type = [];
 let value = [];
+let clickedType = "Private Vehicle";
 
 for(let i = 0; i < transport_option_data.length; i++){
     transport_type.push(transport_option_data[i].Type);
@@ -59,7 +60,16 @@ option = {
       // symbol: 'path://M0,10 L10,10 L5,0 L0,10 z',
       symbol: 'path://M0,10 L10,10 C5.5,10 5.5,5 5,0 C4.5,5 4.5,10 0,10 z',
       itemStyle: {
-        opacity: 0.5
+        normal: {
+              color: function(params) {
+                  if(clickedType==transport_option_data[params.dataIndex].Type) {
+                    return "#005e83";
+                  }else{
+                    return '#ff6d6d';
+                  }
+              },
+              opacity: 0.6,
+        },
       },
       emphasis: {
         itemStyle: {
@@ -78,50 +88,59 @@ option = {
       symbolOffset: [0, '-120%'],
       data: [
         {
+          name: "Private Vehicle",
           value: 6773,
           symbol: pathSymbols.private_vehicle,
           symbolSize: [40, 50]
         },
         {
+          name: "Train",
           value: 4969,
           symbol: pathSymbols.train,
           symbolSize: [50, 60]
         },
         {
+          name: "Walking",
           value: 3246,
           symbol: pathSymbols.walking,
           symbolSize: [65, 35]
         },
         {
+          name: "Tram",
           value: 1331,
           symbol: pathSymbols.tram,
           symbolSize: [50, 30]
         },
         {
+          name: "Bicycle",
           value: 577,
           symbol: pathSymbols.bicycle,
           symbolSize: [50, 35]
         },
         {
+          name: "Bus",
           value: 286,
           symbol: pathSymbols.bus,
           symbolSize: [40, 30]
         },
         {
+          name: "Taxi",
           value: 156,
           symbol: pathSymbols.taxi,
           symbolSize: [40, 50]
         },
         {
+          name: "Other",
           value: 89,
           symbol: pathSymbols.other,
           symbolSize: [40, 50]
         },
         {
-            value: 82,
-            symbol: pathSymbols.motorcycle,
-            symbolSize: [40, 50]
-          }
+          name: "Motorcycle",
+          value: 82,
+          symbol: pathSymbols.motorcycle,
+          symbolSize: [40, 50]
+        }
       ]
     }
   ]
@@ -151,6 +170,8 @@ myChart.on('click', function (params) {
     purpose_option.series[0].data = weekday;
     purpose_option.series[1].data = weekend;
     purposeChart.setOption(purpose_option);
+    clickedType = transport_option_data[params.dataIndex].Type;
+    myChart.setOption(option);
 });
 
 
