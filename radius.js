@@ -1,30 +1,34 @@
-//https://echarts.apache.org/examples/zh/editor.html?c=pie-roseType-simple
 var chartDom = document.getElementById('radius');
-var radiusChart = echarts.init(chartDom);
+var radius = echarts.init(chartDom);
 var radiusOption;
 
 radiusOption = {
-  legend: {
-    top: 'bottom'
+  tooltip: {
+    trigger: 'item'
   },
-  toolbox: {
-    show: true,
-    feature: {
-      mark: { show: true },
-      dataView: { show: true, readOnly: false },
-      restore: { show: true },
-      saveAsImage: { show: true }
-    }
+  legend: {
+    top: '5%',
+    left: 'center'
   },
   series: [
     {
-      name: 'Nightingale Chart',
+      name: 'Access From',
       type: 'pie',
-      radius: [50, 250],
-      center: ['50%', '50%'],
-      roseType: 'area',
-      itemStyle: {
-        borderRadius: 8
+      radius: ['40%', '70%'],
+      avoidLabelOverlap: false,
+      label: {
+        show: false,
+        position: 'center'
+      },
+      emphasis: {
+        label: {
+          show: true,
+          fontSize: '40',
+          fontWeight: 'bold'
+        }
+      },
+      labelLine: {
+        show: false
       },
       data: [
         { value: 38.68, name: 'Private Vehicle' },
@@ -40,4 +44,4 @@ radiusOption = {
   ]
 };
 
-radiusOption && radiusChart.setOption(radiusOption);
+radiusOption && radius.setOption(radiusOption);
