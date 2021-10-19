@@ -29,12 +29,17 @@
   height: 540px;
 }
 
-#distance {
+#weekday-distance {
   position: absolute;
-  /* top: 1000; */
-  width: 1300px;
-  height: 500px;
-  /* background-color: #000; */
+  width: 1200px;
+  height: 360px;
+}
+
+#weekend-distance {
+  position: absolute;
+  width: 1200px;
+  height: 360px;
+  padding-top: 360px;
 }
 
 header{
