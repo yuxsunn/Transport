@@ -29,6 +29,14 @@
   height: 540px;
 }
 
+#distance {
+  position: absolute;
+  /* top: 1000; */
+  width: 1300px;
+  height: 500px;
+  /* background-color: #000; */
+}
+
 header{
     background-color: #4dc8f8;
     color: #FFF;
