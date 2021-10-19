@@ -46,3 +46,52 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+#parking_map { 
+  position:absolute; 
+  top:60px; 
+  width:100%; 
+  height: 600px; }
+
+  #parking_menu {
+    background: #fff;
+    float: left;
+    position: absolute;
+    z-index: 1;
+    top: 100px;
+    right: 10px;
+    border-radius: 3px;
+    width: 120px;
+    border: 1px solid rgba(0,0,0,0.4);
+    font-family: 'Open Sans', sans-serif;
+    }
+     
+    #parking_menu a {
+    font-size: 13px;
+    color: #404040;
+    display: block;
+    margin: 0;
+    padding: 0;
+    padding: 10px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    text-align: center;
+    }
+     
+    #parking_menu a:last-child {
+    border: none;
+    }
+     
+    #parking_menu a:hover {
+    background-color: #f8f8f8;
+    color: #404040;
+    }
+     
+    #parking_menu a.active {
+    background-color: #3887be;
+    color: #ffffff;
+    }
+     
+    #parking_menu a.active:hover {
+    background: #3074a4;
+    }
