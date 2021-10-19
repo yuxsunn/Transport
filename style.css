@@ -30,21 +30,19 @@
 }
 
 #weekday-distance {
-  position: absolute;
   width: 1200px;
   height: 360px;
 }
 
 #weekend-distance {
-  position: absolute;
   width: 1200px;
   height: 360px;
-  padding-top: 360px;
 }
 
 header{
     background-color: #4dc8f8;
     color: #FFF;
+    height: 50px;
 }
 li{
     line-height: 50px;
