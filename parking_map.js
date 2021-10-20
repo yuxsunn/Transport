@@ -84,7 +84,7 @@ map.on('load', e => {
             restriction.push(str);
         }
     }
-    let html_content = '<span class="popup-address">' + e.features[0].properties.rd_seg_dsc;
+    let html_content = '<span class="popup-address"> <h1>' + e.features[0].properties.rd_seg_dsc + '</h1>';
     if(restriction.length == 0){
         html_content = html_content + '</span><br>' + "no restriction";
     }
