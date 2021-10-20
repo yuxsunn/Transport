@@ -1,3 +1,5 @@
+let dataAxis = ['0-0.9', '1-1.9', '2-2.9', '3-3.9', '4-4.9', '5-5.9', '6-6.9', '7-7.9', '8-8.9', '9-9.9', '10-10.9', '11-11.9', '12-12.9', '13-13.9', '14-14.9', '15-15.9', '16-16.9', '17-17.9', '18-18.9', '19-19.9', '20-24.9', '25-29.9', '30-34.9', '35-39.9', '40-44.9', '45-49.9', '50-59.9', '60-69.9', '70-79.9', '80-89.9', '90-99.9', '100-101.9', '110-119.9', '120-129.9', '130-139.9', '140-149.9', '150+'];
+
 var chartDom1 = document.getElementById('weekday-distance');
 var weekdayDistanceChart = echarts.init(chartDom1);
 var option1;
@@ -30,7 +32,7 @@ option1 = {
     xAxis: [
       {
         type: 'category',
-        data: ['0-0.9', '1-1.9', '2-2.9', '3-3.9', '4-4.9', '5-5.9', '6-6.9', '7-7.9', '8-8.9', '9-9.9', '10-10.9', '11-11.9', '12-12.9', '13-13.9', '14-14.9', '15-15.9', '16-16.9', '17-17.9', '18-18.9', '19-19.9', '20-24.9', '25-29.9', '30-34.9', '35-39.9', '40-44.9', '45-49.9', '50-59.9', '60-69.9', '70-79.9', '80-89.9', '90-99.9', '100-101.9', '110-119.9', '120-129.9', '130-139.9', '140-149.9', '150+']
+        data: dataAxis
       }
     ],
     yAxis: [
@@ -147,7 +149,24 @@ option1 = {
         },
         data: [44,57,85,59,33,38,40,28,22,35,19,17,17,16,7,17,17,10,8,12,55,37,32,18,14,13,18,9,11,10,13,12,6,1,3,0,23]
       }
-    ]
+    ],
+    dataZoom: {
+      type: "inside",
+      zlevel: 0,
+      z: 4,
+      filterMode: "filter",
+      start: 0,
+      end: 100,
+      disabled: false,
+      zoomLock: false,
+      zoomOnMouseWheel: true,
+      moveOnMouseMove: true,
+      moveOnMouseWheel: false,
+      preventDefaultMouseMove: true,
+      throttle: 100,
+      startValue: 0,
+      endValue: 19
+    }
 };
 option1 && weekdayDistanceChart.setOption(option1);
 
@@ -183,7 +202,7 @@ option2 = {
     xAxis: [
       {
         type: 'category',
-        data: ['0-0.9', '1-1.9', '2-2.9', '3-3.9', '4-4.9', '5-5.9', '6-6.9', '7-7.9', '8-8.9', '9-9.9', '10-10.9', '11-11.9', '12-12.9', '13-13.9', '14-14.9', '15-15.9', '16-16.9', '17-17.9', '18-18.9', '19-19.9', '20-24.9', '25-29.9', '30-34.9', '35-39.9', '40-44.9', '45-49.9', '50-59.9', '60-69.9', '70-79.9', '80-89.9', '90-99.9', '100-101.9', '110-119.9', '120-129.9', '130-139.9', '140-149.9', '150+']
+        data: dataAxis
       }
     ],
     yAxis: [
@@ -300,7 +319,45 @@ option2 = {
         },
         data: [22,21,36,25,33,20,23,10,15,10,11,9,1,6,6,8,5,1,9,1,19,13,13,7,7,12,5,7,2,10,11,21,5,7,4,0,26]
       }
-    ]
+    ],
+    dataZoom: {
+      type: "inside",
+      zlevel: 0,
+      z: 4,
+      filterMode: "filter",
+      start: 0,
+      end: 100,
+      disabled: false,
+      zoomLock: false,
+      zoomOnMouseWheel: true,
+      moveOnMouseMove: true,
+      moveOnMouseWheel: false,
+      preventDefaultMouseMove: true,
+      throttle: 100,
+      startValue: 0,
+      endValue: 19
+    }
   };
 
   option2 && weekendDistanceChart.setOption(option2);
+
+// Enable data zoom when user click bar.
+const zoomSize = 6;
+weekdayDistanceChart.on('click', function (params) {
+  //console.log(dataAxis[Math.max(params.dataIndex - zoomSize / 2, 0)]);
+  weekdayDistanceChart.dispatchAction({
+    type: 'dataZoom',
+    startValue: dataAxis[Math.max(params.dataIndex - zoomSize / 2, 0)],
+    endValue:
+      dataAxis[Math.min(params.dataIndex + zoomSize / 2, data.length - 1)]
+  });
+});
+weekendDistanceChart.on('click', function (params) {
+  //console.log(dataAxis[Math.max(params.dataIndex - zoomSize / 2, 0)]);
+  weekendDistanceChart.dispatchAction({
+    type: 'dataZoom',
+    startValue: dataAxis[Math.max(params.dataIndex - zoomSize / 2, 0)],
+    endValue:
+      dataAxis[Math.min(params.dataIndex + zoomSize / 2, data.length - 1)]
+  });
+});
