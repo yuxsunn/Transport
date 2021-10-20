@@ -2,50 +2,19 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiemhpcWluZ3ciLCJhIjoiY2t0anJ1Y2xoMWV6NTJ3bm1xN
 var map = new mapboxgl.Map({
     container: 'parking_map',
     style: 'mapbox://styles/zhiqingw/ckur17j9i1zir17k9t1q5ascb',
-    zoom: 14,
+    zoom: 15,
     center: [144.9631, -37.814107]
 });
  
-// map.on('load', function () {
-//     map.addSource('museums', {
-//     type: 'vector',
-//     url: 'mapbox://mapbox.2opop9hr'
-// });
-// map.addLayer({
-//     'id': 'museums',
-//     'type': 'circle',
-//     'source': 'museums',
-//     'layout': {
-//     'visibility': 'visible'
-//     } ,
-//     'paint': {
-//     'circle-radius': 8,
-//     'circle-color': 'rgba(55,148,179,1)'
-//     },
-//     'source-layer': 'museum-cusco'
-// });
- 
-// map.addSource('contours', {
-//     type: 'vector',
-//     url: 'mapbox://mapbox.mapbox-terrain-v2'
-// });
-// map.addLayer({
-//     'id': 'contours',
-//     'type': 'line',
-//     'source': 'contours',
-//     'source-layer': 'contour',
-//     'layout': {
-//     'visibility': 'visible',
-//     'line-join': 'round',
-//     'line-cap': 'round'
-//     },
-//     'paint': {
-//     'line-color': '#877b59',
-//     'line-width': 1
-//     }
-// });
-// });
- 
+var dayTransfer = {
+    "0": "Sunday",
+    "1": "Monday",
+    "2": "Tuesday",
+    "3": "Wednesday",
+    "4": "Thursday",
+    "5": "Friday",
+    "6": "Saturday"
+}
 var toggleableLayerIds = [ 'accident', 'on_street_parking', 'off_street_parking'];
  
 for (var i = 0; i < toggleableLayerIds.length; i++) {
@@ -76,3 +45,62 @@ var layers = document.getElementById('parking_menu');
 layers.appendChild(link);
 }
  
+map.on('load', e => {
+
+  map.on('mousemove', e => {
+    let buildinginfo = map.queryRenderedFeatures(e.point, {
+      layers: ['on_street_parking']
+    });
+  });
+  
+  map.on('mouseenter', 'on_street_parking', e => {
+    map.getCanvas().style.cursor = 'pointer';
+  });
+
+  map.on('mouseleave', 'on_street_parking', e => {
+    map.getCanvas().style.cursor = '';
+  });
+  
+  map.on('click', 'on_street_parking', e => {
+  	console.log(e.features[0].properties);
+    let restriction = [];
+    for(let i = 1; i < 7; i++){
+        let des = "Description" + i;
+        if(e.features[0].properties[des] != null){
+            let properties = e.features[0].properties;
+            let from_day = "FromDay" + i;
+            let to_day = "ToDay" + i;
+            let start_time = "StartTime" + i;
+            let end_time = "EndTime" + i;
+            let duration = "Duration" + i;
+            // console.log(e.features[0].properties[des]);
+            let str = ""
+            if(properties[from_day] == properties[to_day]){
+                str = str + dayTransfer[properties[from_day]];
+            }else{
+                str = dayTransfer[properties[from_day]] + " to " + dayTransfer[properties[to_day]]; 
+            }
+            str = str + " " + properties[start_time] + " - " + properties[end_time] + " " + properties[duration] + "mins parking";
+            restriction.push(str);
+        }
+    }
+    let html_content = '<span class="popup-address">' + e.features[0].properties.rd_seg_dsc;
+    if(restriction.length == 0){
+        html_content = html_content + '</span><br>' + "no restriction";
+    }
+    for(let i = 0; i < restriction.length; i++){
+        html_content = html_content + '</span><br>' + restriction[i];
+    }
+    new mapboxgl.Popup()
+       .setLngLat(e.lngLat)
+       .setHTML(html_content)
+       .addTo(map);
+
+    // new mapboxgl.Popup()
+    //    .setLngLat(e.lngLat)
+    //    .setHTML('<span class="popup-address">' + getDate(e.features[0].properties.reported_date.toString())+ '</span><br>' + e.features[0].properties.victim_age + ' years old<br>Race: ' + e.features[0].properties.victim_race + '<br>Victem gender: ' + e.features[0].properties.victim_sex)
+    //    .addTo(map);
+  });
+
+
+  });
