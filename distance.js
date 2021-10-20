@@ -2,17 +2,29 @@ var chartDom1 = document.getElementById('weekday-distance');
 var weekdayDistanceChart = echarts.init(chartDom1);
 var option1;
 option1 = {
+    title : {
+      text: 'Weekday Travel Distance',
+      padding: 5,
+    },
     tooltip: {
       trigger: 'axis',
       axisPointer: {
         type: 'shadow'
       }
     },
-    legend: {},
+    legend: {
+      top: '9%',
+      itemHeight: 10,
+      itemWidth: 10,
+      textStyle: {
+        fontSize: 11
+      }
+    },
     grid: {
-      left: '3%',
-      right: '4%',
+      left: '2%',
+      right: '2%',
       bottom: '3%',
+      top: '20%',
       containLabel: true
     },
     xAxis: [
@@ -34,7 +46,7 @@ option1 = {
         itemStyle: {
             normal: {
                   color: "#4e9f50",
-                  opacity: 0.8,
+                  opacity: 0.7,
             },
           },
         emphasis: {
@@ -52,7 +64,7 @@ option1 = {
         itemStyle: {
             normal: {
                   color: "#87d180",
-                  opacity: 0.8,
+                  opacity: 0.7,
             },
           },
         emphasis: {
@@ -70,7 +82,7 @@ option1 = {
         itemStyle: {
             normal: {
                   color: "#ef8a0c",
-                  opacity: 0.8,
+                  opacity: 0.7,
             },
           },
         emphasis: {
@@ -88,7 +100,7 @@ option1 = {
         itemStyle: {
             normal: {
                   color: "#fcc66d",
-                  opacity: 0.8,
+                  opacity: 0.7,
             },
           },
         emphasis: {
@@ -106,7 +118,7 @@ option1 = {
         itemStyle: {
             normal: {
                   color: "#3ca8bc",
-                  opacity: 0.8,
+                  opacity: 0.7,
             },
           },
         emphasis: {
@@ -124,7 +136,7 @@ option1 = {
         itemStyle: {
             normal: {
                   color: "#98d9e4",
-                  opacity: 0.8,
+                  opacity: 0.7,
             },
           },
         emphasis: {
@@ -143,19 +155,31 @@ var chartDom2 = document.getElementById('weekend-distance');
 var weekendDistanceChart = echarts.init(chartDom2);
 var option2;
 option2 = {
-    tooltip: {
-      trigger: 'axis',
-      axisPointer: {
-        type: 'shadow'
-      }
-    },
-    legend: {},
-    grid: {
-      left: '3%',
-      right: '4%',
-      bottom: '3%',
-      containLabel: true
-    },
+  title : {
+    text: 'Weekend Travel Distance',
+    padding: 5,
+  },
+  tooltip: {
+    trigger: 'axis',
+    axisPointer: {
+      type: 'shadow'
+    }
+  },
+  legend: {
+    top: '9%',
+    itemHeight: 10,
+    itemWidth: 10,
+    textStyle: {
+      fontSize: 11
+    }
+  },
+  grid: {
+    left: '2%',
+    right: '2%',
+    bottom: '3%',
+    top: '20%',
+    containLabel: true
+  },
     xAxis: [
       {
         type: 'category',
@@ -175,7 +199,7 @@ option2 = {
         itemStyle: {
             normal: {
                   color: "#4e9f50",
-                  opacity: 0.8,
+                  opacity: 0.7,
             },
           },
         emphasis: {
@@ -193,7 +217,7 @@ option2 = {
         itemStyle: {
             normal: {
                   color: "#87d180",
-                  opacity: 0.8,
+                  opacity: 0.7,
             },
           },
         emphasis: {
@@ -211,7 +235,7 @@ option2 = {
         itemStyle: {
             normal: {
                   color: "#ef8a0c",
-                  opacity: 0.8,
+                  opacity: 0.7,
             },
           },
         emphasis: {
@@ -229,7 +253,7 @@ option2 = {
         itemStyle: {
             normal: {
                   color: "#fcc66d",
-                  opacity: 0.8,
+                  opacity: 0.7,
             },
           },
         emphasis: {
@@ -247,7 +271,7 @@ option2 = {
         itemStyle: {
             normal: {
                   color: "#3ca8bc",
-                  opacity: 0.8,
+                  opacity: 0.7,
             },
           },
         emphasis: {
@@ -265,7 +289,7 @@ option2 = {
         itemStyle: {
             normal: {
                   color: "#98d9e4",
-                  opacity: 0.8,
+                  opacity: 0.7,
             },
           },
         emphasis: {
