@@ -103,7 +103,7 @@ h1{
 
 #parking_map { 
   position:absolute; 
-  top:60px; 
+  top:50px; 
   width:70%; 
   height: 600px; }
 
@@ -166,7 +166,7 @@ h1{
     #bicycle_map{
       position: absolute;
       top: 500px;
-      width: 100%;
+      width: 70%;
       height: 500px;
     }
 
@@ -175,7 +175,7 @@ h1{
       float: left;
       position: absolute;
       background: rgba(255, 255, 255, 0.8);
-      width: 100px;
+      width: 160px;
       top:700px;
       left: 2%;
     }
@@ -184,17 +184,30 @@ h1{
       display: inline-block;
       border-radius: 20%;
       width: 10px;
-      height: 10px;
+      height: 2px;
       margin-right: 5px;
+      margin-bottom: 4px;
     }
 
     #parkingmap-title {
       float: left;
       position: absolute;
       background: rgba(255, 255, 255, 0.8);
-      /* top: 1100px; */
+      top: 50px;
       width: 49%;
       left: 1%;
       font-size: 20px;
       text-align: center;
+    }
+
+    #bicyclemap-title {
+      float: left;
+      position: absolute;
+      background: rgba(255, 255, 255, 0.8);
+      top: 500px;
+      width: 49%;
+      left: 1%;
+      font-size: 20px;
+      text-align: center;
+
     }
