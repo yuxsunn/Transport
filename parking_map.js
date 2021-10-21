@@ -52,13 +52,37 @@ map.on('load', e => {
       layers: ['on_street_parking']
     });
   });
+
+  map.on('mousemove', e => {
+    let buildinginfo = map.queryRenderedFeatures(e.point, {
+      layers: ['off_street_parking']
+    });
+  });
   
   map.on('mouseenter', 'on_street_parking', e => {
     map.getCanvas().style.cursor = 'pointer';
   });
 
+  map.on('mouseenter', 'off_street_parking', e => {
+    map.getCanvas().style.cursor = 'pointer';
+  });
+
   map.on('mouseleave', 'on_street_parking', e => {
     map.getCanvas().style.cursor = '';
+  });
+
+  map.on('mouseleave', 'off_street_parking', e => {
+    map.getCanvas().style.cursor = '';
+  });
+
+  map.on('click', 'off_street_parking', e => {
+    console.log(e.features[0].properties)
+    let html_content = '<span class="popup-address"> <h1>' + e.features[0].properties.street_name + '</h1>';
+    html_content = html_content = html_content + '</span><br>' + "Parking Space: " + e.features[0].properties.parking_spaces;
+    new mapboxgl.Popup()
+       .setLngLat(e.lngLat)
+       .setHTML(html_content)
+       .addTo(map);
   });
   
   map.on('click', 'on_street_parking', e => {
