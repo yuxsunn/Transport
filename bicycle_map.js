@@ -58,6 +58,7 @@
    
    bicycle_map.on('mouseenter', 'bicycle', e => {
     bicycle_map.getCanvas().style.cursor = 'pointer';
+     
    });
  
    bicycle_map.on('mouseleave', 'bicycle', e => {
@@ -65,11 +66,10 @@
    });
    
    bicycle_map.on('click', 'bicycle', e => {
-       console.log(e.features[0].properties);
-    //  new mapboxgl.Popup()
-    //     .setLngLat(e.lngLat)
-    //     .setHTML('<span class="popup-address">' + getDate(e.features[0].properties.reported_date.toString())+ '</span><br>' + e.features[0].properties.victim_age + ' years old<br>Race: ' + e.features[0].properties.victim_race + '<br>Victem gender: ' + e.features[0].properties.victim_sex)
-    //     .addTo(map);
+    new mapboxgl.Popup()
+     .setLngLat(e.lngLat)
+     .setHTML('<span class="popup-address">' + e.features[0].properties.name)
+     .addTo(bicycle_map);
    });
  
  
