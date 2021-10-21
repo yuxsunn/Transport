@@ -22,8 +22,8 @@ option = {
     position: 'top'
   },
   grid: {
-    height: '40%',
-    top: '10%'
+    height: '35%',
+    top: '12%'
   },
   xAxis: {
     type: 'category',
@@ -45,7 +45,9 @@ option = {
     calculable: true,
     orient: 'horizontal',
     left: 'center',
-    bottom: '15%'
+    bottom: '18%',
+    itemHeight: 160,
+    itemWidth: 16
   },
   series: [
     {
