@@ -33,8 +33,15 @@ h1{
   height: 540px;
 }
 
+#vehicle {
+  display: inline-block;
+  width: 40%;
+  height: 200px;
+}
+
 #time {
-  width: 1400px;
+  display: inline-block;
+  width: 59%;
   height: 200px;
 }
 
