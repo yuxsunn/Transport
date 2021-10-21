@@ -1,3 +1,45 @@
+#home {
+  background: linear-gradient(to bottom, rgba(0, 183, 255, 0.233) 0%, rgba(37, 153, 14, 0.068) 100%), 
+    url("background.PNG");
+  height: 692px;
+  background-size:100%;
+}
+
+header{
+    background-color: #4dc8f8;
+    color: #FFF;
+    height: 45px;
+}
+li{
+    line-height: 45px;
+    background-color: #4dc8f8;
+    display: inline-block;
+    padding: 0 20px;
+
+}
+li.active{
+    background: rgba(1, 38, 95, 0.26);
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#title {
+  font-size: 50px;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 10%;
+  font-weight: 900;
+}
+
+#description {
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 5%;
+}
+
 h1{
   font-size: 10px;
   color: black;
@@ -11,6 +53,7 @@ h1{
   .demo-theme-dark .demo-background {
     background: #000;
   }
+
 #main {
     position: absolute;
     /* top: 1000; */
@@ -60,24 +103,6 @@ h1{
   padding-right: 20px;
 }
 
-header{
-    background-color: #4dc8f8;
-    color: #FFF;
-    height: 50px;
-}
-li{
-    line-height: 50px;
-    background-color: #4dc8f8;
-    display: inline-block;
-    padding: 0 20px;
-}
-li.active{
-    background: rgba(1, 38, 95, 0.26);
-}
-a {
-  color: inherit;
-  text-decoration: none;
-}
 
 #parking_map { 
   position:absolute; 
