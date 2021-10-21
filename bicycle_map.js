@@ -8,10 +8,10 @@
  let bicycle_map = new mapboxgl.Map({
      container: 'bicycle_map', 
      style: 'mapbox://styles/zhiqingw/ckv127l2z2d3y14qkkkyo0t4n',
-     zzoom: 20,
+     zoom: 15,
      center: [144.9631, -37.814107]
    });
-   
+
    bicycle_map.on('load', e => {
      let layers = [{
        "name": "On road bike lane",
