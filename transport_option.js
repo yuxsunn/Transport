@@ -39,10 +39,11 @@ option = {
   },
   xAxis: {
     data: transport_type,
-    axisTick: { show: false },
+    axisTick: { show: true },
     axisLine: { show: false },
     axisLabel: {
-      color: '#e54035'
+      interval: 0,
+      fontSize: 10
     }
   },
   yAxis: {
@@ -63,12 +64,12 @@ option = {
         normal: {
               color: function(params) {
                   if(clickedType==transport_option_data[params.dataIndex].Type) {
-                    return "#005e83";
+                    return "#065db4";
                   }else{
-                    return '#ff6d6d';
+                    return '#a4e0e0';
                   }
               },
-              opacity: 0.6,
+              opacity: 0.75,
         },
       },
       emphasis: {
@@ -80,7 +81,6 @@ option = {
       z: 10
     },
     {
-      name: 'glyph',
       type: 'pictorialBar',
       barGap: '-100%',
       symbolPosition: 'end',
@@ -97,7 +97,7 @@ option = {
           name: "Train",
           value: 4969,
           symbol: pathSymbols.train,
-          symbolSize: [50, 60]
+          symbolSize: [50, 55]
         },
         {
           name: "Walking",

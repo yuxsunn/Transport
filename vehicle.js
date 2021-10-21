@@ -13,7 +13,7 @@ am4core.ready(function() {
         "name": "Work Related",
         "value": 3230
     }, {
-        "name": "Recreational & social",
+        "name": "Recreational & Social",
         "value": 1626
     }, {
         "name": "Accompany, Pick-up & Drop-off",

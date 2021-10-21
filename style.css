@@ -1,18 +1,18 @@
 #home {
-  background: linear-gradient(to bottom, rgba(0, 183, 255, 0.233) 0%, rgba(37, 153, 14, 0.068) 100%), 
+  background: linear-gradient(to bottom, rgba(51, 102, 153, 0.288) 0%, rgba(153, 204, 204, 0.233) 100%), 
     url("background.PNG");
   height: 692px;
   background-size:100%;
 }
 
 header{
-    background-color: #4dc8f8;
+    background-color: #6699CC;
     color: #FFF;
     height: 45px;
 }
 li{
     line-height: 45px;
-    background-color: #4dc8f8;
+    background-color: #6699CC;
     display: inline-block;
     padding: 0 20px;
 
@@ -55,18 +55,15 @@ h1{
   }
 
 #main {
-    position: absolute;
-    /* top: 1000; */
-    width: 1300px;
-    height: 500px;
-    /* background-color: #000; */
+  display: inline-block;
+  width: 43%;
+  height: 600px;
 }
 
 #purpose {
-  position: absolute;
-  top: 550px;
-  width: 1300px;
-  height: 500px;
+  display: inline-block;
+  width: 55%;
+  height: 360px;
 }
 
 #radius {

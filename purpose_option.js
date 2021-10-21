@@ -1,9 +1,10 @@
-let label_purpose = ["Work related", "Recreational & social", "Accompany, Pick-up & Drop-off", "Shopping", "Education", "Other"];
+let label_purpose = ["Work related", "Recreational & Social", "Accompany, Pick-up & Drop-off", "Shopping", "Education", "Other"];
 let init_weekday = ["57", "16.74", "15.55", "7.23", "2.55", "0.93"];
 let init_weekend = ["18.29", "46.96", "16.21", "16.08", "0.92", "1.53"];
 purpose_option = {
     title: {
-      text: 'Weather Statistics'
+      text: 'Purpose',
+      left: 0
     },
     tooltip: {
       trigger: 'axis',
@@ -12,10 +13,12 @@ purpose_option = {
       }
     },
     legend: {
-      data: ['weekday', 'weekend']
+      data: ['weekday', 'weekend'],
+      top: '10%'
     },
     grid: {
-      left: 250
+      left: '24%',
+      top: '18%',
     },
     toolbox: {
       show: true,
@@ -25,9 +28,9 @@ purpose_option = {
     },
     xAxis: {
       type: 'value',
-      name: 'Days',
+      name: 'Percentage',
       axisLabel: {
-        formatter: '{value}'
+        formatter: '{value}%'
       }
     },
     yAxis: {
@@ -35,7 +38,8 @@ purpose_option = {
       inverse: true,
       data: label_purpose,
       axisLabel: {
-        margin: 20,
+        margin: 8,
+        rotate: 30
       }
     },
     series: [
@@ -44,12 +48,14 @@ purpose_option = {
         type: 'bar',
         data: init_weekday,
         label: true,
+        color: '#414194'
       },
       {
         name: 'weekend',
         type: 'bar',
         label: true,
-        data: init_weekend
+        data: init_weekend,
+        color: '#b3d1f0'
       },    
     ]
   };
