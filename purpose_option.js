@@ -20,12 +20,6 @@ purpose_option = {
       left: '24%',
       top: '18%',
     },
-    toolbox: {
-      show: true,
-      feature: {
-        saveAsImage: {}
-      }
-    },
     xAxis: {
       type: 'value',
       name: 'Percentage',
