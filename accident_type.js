@@ -36,7 +36,7 @@ accidentOption = {
     left: 20
   },
   yAxis: {
-    data: ['reindeer', 'ship', 'plane', 'train', 'car'],
+    data: ['Collision with vehicle', 'Collision with bicycle', 'Struck Pedestrian','Other accident', 'Collision with Fixed object'],
     inverse: true,
     axisLine: { show: false },
     axisTick: { show: false },
@@ -67,23 +67,28 @@ accidentOption = {
       symbolSize: ['80%', '60%'],
       data: [
         {
-          value: 184,
+            //vehicle
+          value: 1698,
           symbol: pathSymbols.reindeer
         },
         {
-          value: 29,
+            //bycicle
+          value: 1144,
           symbol: pathSymbols.ship
         },
         {
-          value: 73,
+            //pedestrain
+          value: 690,
           symbol: pathSymbols.plane
         },
         {
-          value: 91,
+            //other
+          value: 314,
           symbol: pathSymbols.train
         },
         {
-          value: 95,
+            //fix
+          value: 194,
           symbol: pathSymbols.car
         }
       ]
