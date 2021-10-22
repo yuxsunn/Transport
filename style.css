@@ -137,6 +137,7 @@ h1{
 #parking_map { 
   position:absolute; 
   top:50px; 
+  left: 10px;
   width:70%; 
   height: 600px; }
 
