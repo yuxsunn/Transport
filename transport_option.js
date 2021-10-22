@@ -88,6 +88,18 @@ option = {
       symbolPosition: 'end',
       symbolSize: 50,
       symbolOffset: [0, '-120%'],
+      itemStyle: {
+        normal: {
+              color: function(params) {
+                  if(clickedType==transport_option_data[params.dataIndex].Type) {
+                    return "#065db4";
+                  }else{
+                    return '#a4e0e0';
+                  }
+              },
+              opacity: 0.75,
+        },
+      },
       data: [
         {
           name: "Private Vehicle",
