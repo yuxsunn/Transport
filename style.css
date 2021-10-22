@@ -65,6 +65,7 @@ h1{
   display: inline-block;
   width: 43%;
   height: 600px;
+  padding-top: 2%;
 }
 
 #overview #block {
@@ -135,7 +136,7 @@ h1{
 
 
 #parking_map { 
-  position:absolute; 
+  display: inline-block;
   top:50px; 
   left: 10px;
   width:70%; 
@@ -185,10 +186,10 @@ h1{
     }
 
     #off_street {
-      position: absolute;
-      top: 750px;
-      width: 70%;
-  height: 500px;
+      display: inline-block;
+      width: 75%;
+      height: 500px;
+      padding-top: 2%;
     }
 
     #accident_type {
@@ -246,3 +247,27 @@ h1{
       text-align: center;
 
     }
+
+#parking #block1 {
+  display: inline-block;
+  width: 26%;
+}
+
+#parking #block2 {
+  display: inline-block;
+  width: 22%;
+}
+
+#parking #description {
+  font-size: 16px;
+  padding-left: 10%;
+  padding-bottom: 8%;
+  color: #000000;
+}
+
+#parking #block2 #description {
+  font-size: 16px;
+  padding-left: 10%;
+  padding-bottom: 10%;
+  color: #000000;
+}

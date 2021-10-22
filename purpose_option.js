@@ -3,7 +3,7 @@ let init_weekday = ["57", "16.74", "15.55", "7.23", "2.55", "0.93"];
 let init_weekend = ["18.29", "46.96", "16.21", "16.08", "0.92", "1.53"];
 purpose_option = {
     title: {
-      text: 'Purpose',
+      text: 'Travel purpose for Private Vehicle',
       left: 0
     },
     tooltip: {
@@ -47,14 +47,14 @@ purpose_option = {
         type: 'bar',
         data: init_weekday,
         label: true,
-        color: '#414194'
+        color: '#006633'
       },
       {
         name: 'weekend',
         type: 'bar',
         label: true,
         data: init_weekend,
-        color: '#b3d1f0'
+        color: '#99CC99'
       },    
     ]
   };
