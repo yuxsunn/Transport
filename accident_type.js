@@ -20,7 +20,7 @@ const labelSetting = {
 };
 accidentOption = {
   title: {
-    text: 'Vehicles in X City'
+    text: 'Accident type in Melbourne for five years'
   },
 //   legend: {
 //     data: ['2015', '2016']

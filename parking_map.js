@@ -97,7 +97,6 @@ map.on('load', e => {
             let start_time = "StartTime" + i;
             let end_time = "EndTime" + i;
             let duration = "Duration" + i;
-            // console.log(e.features[0].properties[des]);
             let str = ""
             if(properties[from_day] == properties[to_day]){
                 str = str + dayTransfer[properties[from_day]];
@@ -119,11 +118,6 @@ map.on('load', e => {
        .setLngLat(e.lngLat)
        .setHTML(html_content)
        .addTo(map);
-
-    // new mapboxgl.Popup()
-    //    .setLngLat(e.lngLat)
-    //    .setHTML('<span class="popup-address">' + getDate(e.features[0].properties.reported_date.toString())+ '</span><br>' + e.features[0].properties.victim_age + ' years old<br>Race: ' + e.features[0].properties.victim_race + '<br>Victem gender: ' + e.features[0].properties.victim_sex)
-    //    .addTo(map);
   });
 
 
