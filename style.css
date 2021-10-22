@@ -186,8 +186,10 @@ h1{
     }
 
     #off_street {
-      display: inline-block;
+      /* display: inline-block; */
+      position: absolute;
       width: 75%;
+      left: 22%;
       height: 500px;
       padding-top: 2%;
     }
@@ -254,7 +256,9 @@ h1{
 }
 
 #parking #block2 {
-  display: inline-block;
+  /* display: inline-block; */
+  position: absolute;
+  top: 800px;
   width: 22%;
 }
 
