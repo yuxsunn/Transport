@@ -28,7 +28,10 @@ am4core.ready(function() {
         "name": "Other Purpose",
         "value": 73
     }];
-    
+    var title = chart.titles.create();
+    title.text = "Travel Purpose for private vehicle";
+    title.fontSize = 20;
+    title.marginBottom = 10;
     var series = chart.series.push(new am4charts.PictorialStackedSeries());
     series.dataFields.value = "value";
     series.dataFields.category = "name";

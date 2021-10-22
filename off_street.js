@@ -93,6 +93,11 @@ am4core.ready(function() {
     valueAxis.min = 0;
     valueAxis.max = 210000;
     
+    var title = chart.titles.create();
+    title.text = "Number of Commercial parking slot from 2002 to 2019";
+    title.fontSize = 20;
+    title.marginBottom = 10;
+
     // Create series
     var series = chart.series.push(new am4charts.ColumnSeries());
     series.dataFields.valueY = "value";
