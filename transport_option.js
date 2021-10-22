@@ -54,7 +54,7 @@ option = {
     axisLine: { show: false },
     axisLabel: { show: false }
   },
-  color: ['#a4e0e0'],
+  color: ['#065db4'],
   series: [
     {
       name: 'hill',
@@ -66,9 +66,9 @@ option = {
         normal: {
               color: function(params) {
                   if(clickedType==transport_option_data[params.dataIndex].Type) {
-                    return "#065db4";
+                    return "#67bfaf";
                   }else{
-                    return '#a4e0e0';
+                    return '#065db4';
                   }
               },
               opacity: 0.75,
@@ -92,9 +92,9 @@ option = {
         normal: {
               color: function(params) {
                   if(clickedType==transport_option_data[params.dataIndex].Type) {
-                    return "#065db4";
+                    return "#67bfaf";
                   }else{
-                    return '#a4e0e0';
+                    return '#065db4';
                   }
               },
               opacity: 0.75,
