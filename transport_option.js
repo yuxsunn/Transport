@@ -54,7 +54,7 @@ option = {
     axisLine: { show: false },
     axisLabel: { show: false }
   },
-  color: ['#e54035'],
+  color: ['#a4e0e0'],
   series: [
     {
       name: 'hill',
@@ -135,13 +135,13 @@ option = {
           name: "Other",
           value: 89,
           symbol: pathSymbols.other,
-          symbolSize: [40, 50]
+          symbolSize: [30, 30]
         },
         {
           name: "Motorcycle",
           value: 82,
           symbol: pathSymbols.motorcycle,
-          symbolSize: [40, 50]
+          symbolSize: [30, 30]
         }
       ]
     }
