@@ -15,7 +15,7 @@ var dayTransfer = {
     "5": "Friday",
     "6": "Saturday"
 }
-var toggleableLayerIds = [ 'accident', 'on_street_parking', 'off_street_parking'];
+var toggleableLayerIds = [ 'accident', 'on_street_parking', 'commercial'];
  
 for (var i = 0; i < toggleableLayerIds.length; i++) {
 var id = toggleableLayerIds[i];
