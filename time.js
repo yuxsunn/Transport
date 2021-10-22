@@ -34,6 +34,8 @@ option = {
   xAxis: {
     type: 'category',
     data: hours,
+    axisTick: { show: false },
+    axisLine: { show: false },
     splitArea: {
       show: true
     }
@@ -41,6 +43,8 @@ option = {
   yAxis: {
     type: 'category',
     data: days,
+    axisTick: { show: false },
+    axisLine: { show: false },
     splitArea: {
       show: true
     }

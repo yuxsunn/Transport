@@ -23,12 +23,17 @@ purpose_option = {
     xAxis: {
       type: 'value',
       name: 'Percentage',
+      axisLine: { show: false },
+      axisTick: { show: false },
+      
       axisLabel: {
         formatter: '{value}%'
       }
     },
     yAxis: {
       type: 'category',
+      axisLine: { show: false },
+      axisTick: { show: false },
       inverse: true,
       data: label_purpose,
       axisLabel: {

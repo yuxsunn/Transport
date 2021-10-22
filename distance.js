@@ -31,12 +31,17 @@ option1 = {
     },
     xAxis: [
       {
+        axisTick: { show: false },
+    axisLine: { show: false },
         type: 'category',
         data: dataAxis
       }
     ],
     yAxis: [
+      
       {
+        axisTick: { show: false },
+    axisLine: { show: false },
         type: 'value'
       }
     ],
@@ -201,12 +206,16 @@ option2 = {
   },
     xAxis: [
       {
+        axisTick: { show: false },
+    axisLine: { show: false },
         type: 'category',
         data: dataAxis
       }
     ],
     yAxis: [
       {
+        axisTick: { show: false },
+    axisLine: { show: false },
         type: 'value'
       }
     ],

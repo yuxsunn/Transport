@@ -42,7 +42,7 @@ option = {
   },
   xAxis: {
     data: transport_type,
-    axisTick: { show: true },
+    axisTick: { show: false },
     axisLine: { show: false },
     axisLabel: {
       interval: 0,
