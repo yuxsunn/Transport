@@ -7,7 +7,25 @@ purpose_option = {
       left: 0
     },
     tooltip: {
-      formatter: '{b0}: <br /> {a0}: {c0}% <br />{a1}: {c1}%',
+      formatter: function (params) {
+        var htmlStr = '';
+        for(var i=0;i<params.length;i++){
+          var param = params[i];
+          var xName = param.name;
+          var seriesName = param.seriesName;
+          var value = param.value;
+          var color = param.color;
+          
+          if(i===0){
+            htmlStr += xName + '<br/>';
+          }
+          htmlStr +='<div>';
+          htmlStr += '<span style="margin-right:5px;display:inline-block;width:10px;height:10px;border-radius:5px;background-color:'+color+';"></span>';          
+          htmlStr +=  seriesName + ': ' + value + '%';          
+          htmlStr += '</div>';
+        }
+        return htmlStr;
+      },
       trigger: 'axis',
       axisPointer: {
         type: 'shadow'
@@ -26,7 +44,6 @@ purpose_option = {
       name: 'Percentage',
       axisLine: { show: false },
       axisTick: { show: false },
-      
       axisLabel: {
         formatter: '{value}%'
       }

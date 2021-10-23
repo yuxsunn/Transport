@@ -19,7 +19,6 @@ li{
     background-color: #6699CC;
     display: inline-block;
     padding: 0 20px;
-
 }
 li.active{
     background: rgba(1, 38, 95, 0.26);
@@ -35,7 +34,7 @@ a {
   text-align: center;
   padding-top: 10%;
   font-weight: 900;
-  padding-bottom: 6%;
+  padding-bottom: 5%;
 }
 
 #home #description {
@@ -104,6 +103,7 @@ h1{
 #vehicle-page #block {
   display: inline-block;
   width: 53%;
+  padding-top: 1%;
 }
 
 #vehicle-page #description {
@@ -111,7 +111,7 @@ h1{
   height: 20%;
   font-size: 15px;
   padding-left: 4%;
-  padding-bottom: 6.5%;
+  padding-bottom: 4%;
   color: #000000;
 }
 
@@ -142,7 +142,7 @@ h1{
 #distance-description {
   width: 90%;
   height: auto;
-  padding-left: 4%;
+  padding-left: 2%;
   color: #000;
 }
 
@@ -202,7 +202,6 @@ h1{
       width: 75%;
       left: 22%;
       height: 500px;
-      padding-top: 2%;
     }
 
     #accident_type {
