@@ -19,7 +19,7 @@ const data = [[0, 0, 0], [0, 1, 0], [0, 2, 0], [0, 3, 0], [0, 4, 2], [0, 5, 9], 
 
 option = {
   title: {
-    text: 'Travel time of Private vehicle in Melbourne',
+    text: 'Average number of private vehicle travel to Melbourne each hour',
     textAlign: 'left',
     padding: {
       top: '10%'
