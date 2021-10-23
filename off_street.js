@@ -1,4 +1,9 @@
-// https://www.amcharts.com/demos/variance-indicators/
+ /**
+  * Eidited from  https://www.amcharts.com/demos/variance-indicators/
+  * 
+  */
+
+
 am4core.ready(function() {
 
     // Themes begin

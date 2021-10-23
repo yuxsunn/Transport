@@ -1,3 +1,9 @@
+/**
+ * Eidited from solution of lab 7
+ * https://jsfiddle.net/4kzf7sLx/3/
+ * 
+ */
+
 mapboxgl.accessToken = 'pk.eyJ1IjoiemhpcWluZ3ciLCJhIjoiY2t0anJ1Y2xoMWV6NTJ3bm1xNnBoNWt0eiJ9.oBR-Za509LFKgj2khrxf2g';
 var map = new mapboxgl.Map({
     container: 'parking_map',
