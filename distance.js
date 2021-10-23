@@ -31,6 +31,7 @@ option1 = {
     },
     xAxis: [
       {
+        name: 'kilometer',
         axisTick: { show: false },
     axisLine: { show: false },
         type: 'category',
@@ -206,6 +207,7 @@ option2 = {
   },
     xAxis: [
       {
+        name: 'kilometer',
         axisTick: { show: false },
     axisLine: { show: false },
         type: 'category',
