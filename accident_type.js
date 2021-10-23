@@ -15,12 +15,12 @@ accidentOption = {
     top: "3%"
   },
   color: ['#065db4'],
-  tooltip: {
-    trigger: 'axis',
-    axisPointer: {
-      type: 'shadow'
-    }
-  },
+  // tooltip: {
+  //   trigger: 'axis',
+  //   axisPointer: {
+  //     type: 'shadow'
+  //   }
+  // },
   grid: {
     containLabel: true,
     left: 20

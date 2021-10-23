@@ -7,6 +7,7 @@ purpose_option = {
       left: 0
     },
     tooltip: {
+      formatter: '{b0}: <br /> {a0}: {c0}% <br />{a1}: {c1}%',
       trigger: 'axis',
       axisPointer: {
         type: 'shadow'
