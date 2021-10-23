@@ -15,7 +15,7 @@ option1 = {
       }
     },
     legend: {
-      top: '9%',
+      top: '8%',
       itemHeight: 10,
       itemWidth: 10,
       textStyle: {
@@ -23,17 +23,17 @@ option1 = {
       }
     },
     grid: {
-      left: '2%',
-      right: '2%',
+      left: '8%',
+      right: '6%',
       bottom: '3%',
-      top: '24%',
+      top: '28%',
       containLabel: true
     },
     xAxis: [
       {
-        name: 'kilometer',
+        name: 'km',
         axisTick: { show: false },
-    axisLine: { show: false },
+        axisLine: { show: false },
         type: 'category',
         data: dataAxis
       }
@@ -42,8 +42,9 @@ option1 = {
       
       {
         axisTick: { show: false },
-    axisLine: { show: false },
-        type: 'value'
+        axisLine: { show: false },
+        type: 'value',
+        name: 'Number of Private Vehicle',
       }
     ],
     series: [
@@ -191,7 +192,7 @@ option2 = {
     }
   },
   legend: {
-    top: '9%',
+    top: '8%',
     itemHeight: 10,
     itemWidth: 10,
     textStyle: {
@@ -199,17 +200,17 @@ option2 = {
     }
   },
   grid: {
-    left: '2%',
-    right: '2%',
+    left: '8%',
+    right: '6%',
     bottom: '3%',
-    top: '24%',
+    top: '28%',
     containLabel: true
   },
     xAxis: [
       {
-        name: 'kilometer',
+        name: 'km',
         axisTick: { show: false },
-    axisLine: { show: false },
+        axisLine: { show: false },
         type: 'category',
         data: dataAxis
       }
@@ -217,8 +218,9 @@ option2 = {
     yAxis: [
       {
         axisTick: { show: false },
-    axisLine: { show: false },
-        type: 'value'
+        axisLine: { show: false },
+        type: 'value',
+        name: 'Number of Private Vehicle',
       }
     ],
     series: [
