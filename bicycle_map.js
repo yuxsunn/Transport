@@ -15,20 +15,29 @@
    bicycle_map.on('load', e => {
      let layers = [{
        "name": "On road bike lane",
-       "color": "#9144da"
+       "color": "#9144da",
+       "type": "line"
      },
      {
        "name": "Off road bike lane",
-       "color": "#f67979"
+       "color": "#f67979",
+       "type": "line"
      },
      {
        "name": "Informal bike lane",
-       "color": "#00c70a"
+       "color": "#00c70a",
+       "type": "line"
      },
      {
        "name": "Corridor",
-       "color": "#ffc252"
-     }
+       "color": "#ffc252",
+       "type": "line"
+     },
+     {
+      "name": "Bicycle Accident",
+      "color": "#000000",
+      "type": "dot"
+    }
    ];
  
    let legend = document.querySelector('#legend');
@@ -37,7 +46,12 @@
      let item = document.createElement('div');
  
      let key = document.createElement('span');
-     key.classList.add('legend-key');
+     if(layer.type == "line"){
+      key.classList.add('legend-key');
+     }else{
+      key.classList.add('legend-key-dot');
+     }
+     
      key.style.backgroundColor = layer.color;
  
      let value = document.createElement('span');
