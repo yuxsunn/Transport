@@ -26,7 +26,7 @@ option1 = {
       left: '2%',
       right: '2%',
       bottom: '3%',
-      top: '20%',
+      top: '24%',
       containLabel: true
     },
     xAxis: [
@@ -201,7 +201,7 @@ option2 = {
     left: '2%',
     right: '2%',
     bottom: '3%',
-    top: '20%',
+    top: '24%',
     containLabel: true
   },
     xAxis: [

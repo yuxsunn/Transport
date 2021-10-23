@@ -9,11 +9,9 @@ for(let i = 0; i < transport_option_data.length; i++){
     value.push(transport_option_data[i]["Total Number"]);
 }
 
-
-
 option = {
   title: {
-    text: 'The major travel methods in Melbourne '
+    text: 'The major travel methods in Melbourne',
   },
   tooltip: {
     trigger: 'axis',
@@ -23,6 +21,9 @@ option = {
     formatter: function (params) {
       return params[0].name + ': ' + params[0].value;
     }
+  },
+  grid: {
+    top: '12%'
   },
   xAxis: {
     data: transport_type,

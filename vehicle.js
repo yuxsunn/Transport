@@ -31,6 +31,7 @@ am4core.ready(function() {
     var title = chart.titles.create();
     title.text = "Travel Purpose for private vehicle";
     title.fontSize = 20;
+    title.fontWeight = 600;
     title.marginBottom = 10;
     var series = chart.series.push(new am4charts.PictorialStackedSeries());
     series.dataFields.value = "value";

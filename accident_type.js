@@ -11,12 +11,10 @@ const labelSetting = {
 };
 accidentOption = {
   title: {
-    text: 'Accident type in Melbourne for five years'
+    text: 'Accident types in Melbourne for five years',
+    top: "3%"
   },
   color: ['#065db4'],
-//   legend: {
-//     data: ['2015', '2016']
-//   },
   tooltip: {
     trigger: 'axis',
     axisPointer: {

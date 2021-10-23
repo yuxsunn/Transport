@@ -96,6 +96,7 @@ am4core.ready(function() {
     var title = chart.titles.create();
     title.text = "Number of Commercial parking slot from 2002 to 2019";
     title.fontSize = 20;
+    title.fontWeight = 700;
     title.marginBottom = 10;
 
     // Create series
