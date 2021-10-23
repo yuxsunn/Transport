@@ -22,11 +22,8 @@ option1 = {
             htmlStr += xName + 'km<br/>';
           }
           htmlStr +='<div>';
-          
-          htmlStr += '<span style="margin-right:5px;display:inline-block;width:10px;height:10px;border-radius:5px;background-color:'+color+';"></span>';
-          
-          htmlStr +=  seriesName + ': ' + value + '%';
-          
+          htmlStr += '<span style="margin-right:5px;display:inline-block;width:10px;height:10px;border-radius:5px;background-color:'+color+';"></span>';          
+          htmlStr +=  seriesName + ': ' + value + '%';          
           htmlStr += '</div>';
         }
         return htmlStr;
