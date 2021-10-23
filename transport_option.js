@@ -146,8 +146,6 @@ option = {
   ]
 };
 
-console.log(purpose_option);
-
 option && myChart.setOption(option);
 
 
