@@ -9,6 +9,28 @@ option1 = {
       padding: 5,
     },
     tooltip: {
+      formatter: function (params) {
+        var htmlStr = '';
+        for(var i=0;i<params.length;i++){
+          var param = params[i];
+          var xName = param.name;
+          var seriesName = param.seriesName;
+          var value = param.value;
+          var color = param.color;
+          
+          if(i===0){
+            htmlStr += xName + 'km<br/>';
+          }
+          htmlStr +='<div>';
+          
+          htmlStr += '<span style="margin-right:5px;display:inline-block;width:10px;height:10px;border-radius:5px;background-color:'+color+';"></span>';
+          
+          htmlStr +=  seriesName + ': ' + value + '%';
+          
+          htmlStr += '</div>';
+        }
+        return htmlStr;
+      },
       trigger: 'axis',
       axisPointer: {
         type: 'shadow'
