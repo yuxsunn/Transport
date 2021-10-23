@@ -47,6 +47,50 @@ layers.appendChild(link);
  
 map.on('load', e => {
 
+  let layers = [{
+    "name": "on street carpark with restriction",
+    "color": "#0cbb2c",
+    "type": "line"
+  },
+  {
+    "name": "on street carpark with restriction",
+    "color": "#8e86f3",
+    "type": "line"
+  },
+  {
+    "name": "Commercial carpark",
+    "color": "#5d14db",
+    "type": "dot"
+  },
+  {
+    "name": "Parking accident",
+    "color": "#ed2c2c",
+    "type": "dot"
+  }
+];
+
+let legend = document.querySelector('#parkmap-legend');
+
+for (let layer of layers) {
+  let item = document.createElement('div');
+
+  let key = document.createElement('span');
+  if(layer.type == "line"){
+    key.classList.add('legend-key');
+  }else{
+    key.classList.add('legend-key-dot');
+  }
+  
+  key.style.backgroundColor = layer.color;
+
+  let value = document.createElement('span');
+  value.innerHTML = layer.name;
+
+  item.appendChild(key);
+  item.appendChild(value);
+  legend.appendChild(item);
+}
+
   map.on('mousemove', e => {
     let buildinginfo = map.queryRenderedFeatures(e.point, {
       layers: ['on_street_parking']
@@ -55,7 +99,7 @@ map.on('load', e => {
 
   map.on('mousemove', e => {
     let buildinginfo = map.queryRenderedFeatures(e.point, {
-      layers: ['off_street_parking']
+      layers: ['commercial']
     });
   });
   
@@ -63,7 +107,11 @@ map.on('load', e => {
     map.getCanvas().style.cursor = 'pointer';
   });
 
-  map.on('mouseenter', 'off_street_parking', e => {
+  map.on('mouseenter', 'commercial', e => {
+    map.getCanvas().style.cursor = 'pointer';
+  });
+
+  map.on('mouseenter', 'accident', e => {
     map.getCanvas().style.cursor = 'pointer';
   });
 
@@ -71,11 +119,25 @@ map.on('load', e => {
     map.getCanvas().style.cursor = '';
   });
 
-  map.on('mouseleave', 'off_street_parking', e => {
+  map.on('mouseleave', 'commercial', e => {
     map.getCanvas().style.cursor = '';
   });
 
-  map.on('click', 'off_street_parking', e => {
+  map.on('mouseleave', 'accident', e => {
+    map.getCanvas().style.cursor = '';
+  });
+
+  map.on('click', 'accident', e => {
+    console.log(e.features[0].properties)
+    let html_content = '<span class="popup-address"> <h1>' + e.features[0].properties.ACCIDENT_TYPE + '</h1>';
+    html_content = html_content = html_content + '</span><br>' + "Causing: " + e.features[0].properties.DCA_CODE.toLowerCase();
+    new mapboxgl.Popup()
+       .setLngLat(e.lngLat)
+       .setHTML(html_content)
+       .addTo(map);
+  });
+
+  map.on('click', 'commercial', e => {
     console.log(e.features[0].properties)
     let html_content = '<span class="popup-address"> <h1>' + e.features[0].properties.street_name + '</h1>';
     html_content = html_content = html_content + '</span><br>' + "Parking Space: " + e.features[0].properties.parking_spaces;

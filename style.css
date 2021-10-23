@@ -142,7 +142,7 @@ h1{
 
 #parking_map { 
   display: inline-block;
-  top:50px; 
+  top:10px; 
   left: 10px;
   width:70%; 
   height: 600px; }
@@ -224,6 +224,26 @@ h1{
       left: 2%;
     }
 
+    #parkmap-legend{
+      padding-left: 10px;
+      float: left;
+      position: absolute;
+      background: rgba(255, 255, 255, 0.8);
+      width: 160px;
+      top:100px;
+      left: 2%;
+
+    }
+
+    .legend-key-dot {
+      display: inline-block;
+      border-radius: 50%;
+      width: 7px;
+      height: 7px;
+      margin-right: 5px;
+      /* margin-bottom: 4px; */
+    }
+
     .legend-key {
       display: inline-block;
       border-radius: 20%;
@@ -237,7 +257,7 @@ h1{
       float: left;
       position: absolute;
       background: rgba(255, 255, 255, 0.8);
-      top: 50px;
+      top: 60px;
       width: 49%;
       left: 1%;
       font-size: 20px;

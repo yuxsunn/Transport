@@ -72,7 +72,7 @@ accidentOption = {
             //pedestrain
           value: 690,
           symbol: pathSymbols.walking,
-          symbolSize: [30, 30]
+          symbolSize: [25, 30]
         },
         {
             //other
