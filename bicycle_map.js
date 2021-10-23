@@ -85,15 +85,29 @@
      .setHTML('<span class="popup-address">' + e.features[0].properties.name)
      .addTo(bicycle_map);
    });
- 
- 
+
+   bicycle_map.on('mousemove', e => {
+    let buildinginfo = bicycle_map.queryRenderedFeatures(e.point, {
+      layers: ['bicycle']
+    });
+  });
+  
+  bicycle_map.on('mouseenter', 'accident', e => {
+   bicycle_map.getCanvas().style.cursor = 'pointer';
+    
+  });
+
+  bicycle_map.on('mouseleave', 'accident', e => {
+   bicycle_map.getCanvas().style.cursor = '';
+  });
+  
+  bicycle_map.on('click', 'accident', e => {
+    console.log(e.features[0].properties)
+   new mapboxgl.Popup()
+    .setLngLat(e.lngLat)
+    .setHTML('<span class="popup-address">' + "Speed Zone: " + e.features[0].properties.SPEED_ZONE + "<br>Severity: " + e.features[0].properties.SEVERITY + "<br>Police Attend: " + e.features[0].properties.POLICE_ATTEND)
+    .addTo(bicycle_map);
+  });
+  
    });
  
-//    function getDate(date){
-     
-//      let year = date.substring(0,4);
-//      let month = date.substring(4,6);
-//      let day = date.substring(6,8);
-//      return year + '.' + month + '.' + day;
- 
-//    }
