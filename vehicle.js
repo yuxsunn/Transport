@@ -29,7 +29,7 @@ am4core.ready(function() {
         "value": 73
     }];
     var title = chart.titles.create();
-    title.text = "Travel Purpose for private vehicle";
+    title.text = "Travel Purpose for private vehicle in 2018";
     title.fontSize = 20;
     title.fontWeight = 600;
     title.marginBottom = 10;

@@ -11,7 +11,7 @@ for(let i = 0; i < transport_option_data.length; i++){
 
 option = {
   title: {
-    text: 'The major travel methods in Melbourne',
+    text: 'The major travel methods in Melbourne in 2018',
   },
   tooltip: {
     trigger: 'axis',
@@ -163,7 +163,7 @@ myChart.on('click', function (params) {
     let result = process_data(transport_option_data[params.dataIndex]);
     let weekday = result[0];
     let weekend = result[1];
-    purpose_option.title.text = "Travel purpose for " + transport_type[params.dataIndex];
+    purpose_option.title.text = "Travel purpose for " + transport_type[params.dataIndex] + " in 2018";
     // console.log(label_purpose[params.dataIndex])
     purpose_option.series[0].data = weekday;
     purpose_option.series[1].data = weekend;

@@ -3,7 +3,7 @@ let init_weekday = ["57", "16.74", "15.55", "7.23", "2.55", "0.93"];
 let init_weekend = ["18.29", "46.96", "16.21", "16.08", "0.92", "1.53"];
 purpose_option = {
     title: {
-      text: 'Travel purpose for Private Vehicle',
+      text: 'Travel purpose for Private Vehicle in 2018',
       left: 0
     },
     tooltip: {

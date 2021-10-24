@@ -5,7 +5,7 @@ var weekdayDistanceChart = echarts.init(chartDom1);
 var option1;
 option1 = {
     title : {
-      text: 'Weekday Travel Distance of Private vehicle',
+      text: 'Weekday Travel Distance of Private vehicle in 2018',
       padding: 5,
     },
     tooltip: {
@@ -201,7 +201,7 @@ var weekendDistanceChart = echarts.init(chartDom2);
 var option2;
 option2 = {
   title : {
-    text: 'Weekend Travel Distance of Private vehicle',
+    text: 'Weekend Travel Distance of Private vehicle in 2018',
     padding: 5,
   },
   tooltip: {

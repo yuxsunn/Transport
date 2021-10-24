@@ -14,12 +14,12 @@
 
    bicycle_map.on('load', e => {
      let layers = [{
-       "name": "On road bike lane",
+       "name": "On-road bike lane",
        "color": "#9144da",
        "type": "line"
      },
      {
-       "name": "Off road bike lane",
+       "name": "Off-road bike lane",
        "color": "#f67979",
        "type": "line"
      },
@@ -34,7 +34,7 @@
        "type": "line"
      },
      {
-      "name": "Bicycle Accident",
+      "name": "Bicycle-related accident",
       "color": "#000000",
       "type": "dot"
     }

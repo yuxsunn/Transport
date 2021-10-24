@@ -54,22 +54,22 @@ layers.appendChild(link);
 map.on('load', e => {
 
   let layers = [{
-    "name": "on street carpark with restriction",
+    "name": "On-street carpark with restriction",
     "color": "#0cbb2c",
     "type": "line"
   },
   {
-    "name": "on street carpark with restriction",
+    "name": "On-street carpark without restriction",
     "color": "#8e86f3",
     "type": "line"
   },
   {
-    "name": "Commercial carpark",
+    "name": "Off-street commercial carpark",
     "color": "#5d14db",
     "type": "dot"
   },
   {
-    "name": "Parking accident",
+    "name": "Parking-related accident",
     "color": "#ed2c2c",
     "type": "dot"
   }
