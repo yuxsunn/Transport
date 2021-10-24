@@ -163,7 +163,7 @@ myChart.on('click', function (params) {
     let result = process_data(transport_option_data[params.dataIndex]);
     let weekday = result[0];
     let weekend = result[1];
-    purpose_option.title.text = "Travel purpose for " + transport_type[params.dataIndex] + " in 2018";
+    purpose_option.title.text = "Travel purpose for " + transport_type[params.dataIndex];
     // console.log(label_purpose[params.dataIndex])
     purpose_option.series[0].data = weekday;
     purpose_option.series[1].data = weekend;
