@@ -1,3 +1,8 @@
+/**
+  * Edited from https://echarts.apache.org/examples/zh/editor.html?c=bar-gradient
+  * 
+  */
+
 let dataAxis = ['0-0.9', '1-1.9', '2-2.9', '3-3.9', '4-4.9', '5-5.9', '6-6.9', '7-7.9', '8-8.9', '9-9.9', '10-10.9', '11-11.9', '12-12.9', '13-13.9', '14-14.9', '15-15.9', '16-16.9', '17-17.9', '18-18.9', '19-19.9', '20-24.9', '25-29.9', '30-34.9', '35-39.9', '40-44.9', '45-49.9', '50-59.9', '60-69.9', '70-79.9', '80-89.9', '90-99.9', '100-101.9', '110-119.9', '120-129.9', '130-139.9', '140-149.9', '150+'];
 
 var chartDom1 = document.getElementById('weekday-distance');
@@ -205,6 +210,25 @@ option2 = {
     padding: 5,
   },
   tooltip: {
+    formatter: function (params) {
+      var htmlStr = '';
+      for(var i=0;i<params.length;i++){
+        var param = params[i];
+        var xName = param.name;
+        var seriesName = param.seriesName;
+        var value = param.value;
+        var color = param.color;
+        
+        if(i===0){
+          htmlStr += xName + 'km<br/>';
+        }
+        htmlStr +='<div>';
+        htmlStr += '<span style="margin-right:5px;display:inline-block;width:10px;height:10px;border-radius:5px;background-color:'+color+';"></span>';          
+        htmlStr +=  seriesName + ': ' + value + '%';          
+        htmlStr += '</div>';
+      }
+      return htmlStr;
+    },
     trigger: 'axis',
     axisPointer: {
       type: 'shadow'

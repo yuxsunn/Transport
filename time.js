@@ -1,3 +1,8 @@
+/**
+  * Edited from https://echarts.apache.org/examples/en/editor.html?c=heatmap-cartesian
+  * 
+  */
+
 var chartDom = document.getElementById('time');
 var timeChart = echarts.init(chartDom);
 var option;
@@ -19,7 +24,7 @@ const data = [[0, 0, 0], [0, 1, 0], [0, 2, 0], [0, 3, 0], [0, 4, 2], [0, 5, 9], 
 
 option = {
   title: {
-    text: 'Average number of private vehicle travel to Melbourne each hour',
+    text: 'Volume of private vehicle travel to Melbourne each hour',
     textAlign: 'left',
     padding: {
       top: '10%'

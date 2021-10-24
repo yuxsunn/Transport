@@ -1,6 +1,5 @@
 /**
- * Eidited from 
- * https://echarts.apache.org/examples/zh/editor.html?c=pictorialBar-vehicle
+ * Edited from https://echarts.apache.org/examples/zh/editor.html?c=pictorialBar-vehicle
  * 
  */
 

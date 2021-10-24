@@ -1,8 +1,7 @@
  /**
-  * Eidited from  https://www.amcharts.com/demos/variance-indicators/
+  * Edited from  https://www.amcharts.com/demos/variance-indicators/
   * 
   */
-
 
 am4core.ready(function() {
 

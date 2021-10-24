@@ -1,3 +1,8 @@
+/**
+  * Edited from https://www.amcharts.com/demos/pictorial-stacked-chart/
+  * 
+  */
+
 am4core.ready(function() {
 
     // Themes begin

@@ -1,3 +1,8 @@
+/**
+  * Edited from https://echarts.apache.org/examples/en/editor.html?c=pictorialBar-velocity
+  * 
+  */
+
 var chartDom = document.getElementById('main');
 var myChart = echarts.init(chartDom);
 var option;
