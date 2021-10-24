@@ -1,3 +1,10 @@
+/**
+ * Eidited from 
+ * https://echarts.apache.org/examples/zh/editor.html?c=pictorialBar-vehicle
+ * 
+ */
+
+
 var chartDom = document.getElementById('accident_type');
 var accidentChart = echarts.init(chartDom);
 var accidentOption;
